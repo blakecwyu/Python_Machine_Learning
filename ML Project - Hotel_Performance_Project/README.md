@@ -90,4 +90,11 @@ but you can change the version if needed.
 Also, you can replace hotel-ml with any environment name you prefer.  
   
 ---
-📷 Example Results  
+## 📷 Example Results  
+
+---
+## 🚀 Future Improvements  
+
+---
+## 📄 License  
+This project uses synthetic data for educational purposes and is not based on real operational hotel data.  

@@ -51,7 +51,7 @@ This project uses a synthetic 365-day dataset to explore and model hotel perform
    - Decision Tree Classifier
 
    **Goal**: Identify key factors influencing occupancy fluctuations.
----
+---  
 3. Classification: Grouping Day Types for Pricing Tiers
    Use clustering to assess whether the **traditional day types**, weekday, weekend, holiday, are sufficient, or if **more refined day types** should be created to better support pricing strategies.  
 
@@ -64,9 +64,22 @@ This project uses a synthetic 365-day dataset to explore and model hotel perform
   
    **Goal**: Identify potential new day types (e.g., peak-season weekday, Saturday, event-driven weekend) based on performance patterns, to support more effective pricing tiers beyond the standard 3-category system.  
 
+---  
 ## 📁 Project Structure  
 ML Project - Hotel_Performance_project/  
 ├── Hotel Performance Prediction.ipynb # Jupyter notebook with full project (EDA, models, results)  
 ├── Mock_Hotel_daily.csv # Synthetic dataset (365 days)  
 ├── README.md # Project overview and usage  
 └── requirements.txt # Python dependencies for pip installation  
+
+---  
+## 🔧 Installation  
+### Option 1: With pip  
+```bash  
+pip install -r requirements.txt  
+
+### Option 2: With Conda  
+You can manually create a conda environment and install packages listed in requirements.txt:  
+conda create -n hotel-ml python=3.10  
+conda activate hotel-ml  
+pip install -r requirements.txt  

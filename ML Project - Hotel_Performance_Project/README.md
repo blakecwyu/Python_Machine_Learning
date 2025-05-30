@@ -51,4 +51,5 @@ This project uses a synthetic 365-day dataset to explore and model hotel perform
 ML Project - Hotel_Performance_project/  
 ├── Hotel Performance Prediction.ipynb # Jupyter notebook with full project (EDA, models, results)  
 ├── Mock_Hotel_daily.csv # Synthetic dataset (365 days)  
-└── README.md # Project overview and usage  
+├── README.md # Project overview and usage  
+└── requirements.txt # Python dependencies for pip installation  

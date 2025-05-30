@@ -77,9 +77,11 @@ ML Project - Hotel_Performance_project/
 ### Option 1: With pip  
 ```bash  
 pip install -r requirements.txt  
-
+```
 ### Option 2: With Conda  
 You can manually create a conda environment and install packages listed in requirements.txt:  
+```
 conda create -n hotel-ml python=3.10  
 conda activate hotel-ml  
-pip install -r requirements.txt  
+pip install -r requirements.txt
+```

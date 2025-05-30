@@ -1,5 +1,5 @@
 **Machine Learning Project**  
-**Hotel Performance Analysis using Regression and Classification**  
+# 🏨Hotel Performance Analysis using Regression and Classification   
   
 This project uses a synthetic 365-day dataset to explore and model hotel performance using machine learning techniques. It is divided into three parts:  
 - **Regression** – Predict hotel revenue
@@ -7,7 +7,7 @@ This project uses a synthetic 365-day dataset to explore and model hotel perform
 - **Classification** – Classify the number of day types based on revenue and ADR to support price tiering
   
 ---  
-Project Overview  
+## 📊Project Overview  
 1. Regression: Predicting Daily Revenue  
    Use multiple regression models to predict **total daily revenue** using:   
    

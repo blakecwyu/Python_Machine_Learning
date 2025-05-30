@@ -6,6 +6,16 @@ This project uses a synthetic 365-day dataset to explore and model hotel perform
 - **Classification** – Classify the number of day types based on revenue and ADR to support price tiering
   
 ---  
+## 🧪 Dataset  
+- The dataset is **synthetic**, generated to simulate realistic hotel performance across 365 days.
+- Fields include:  
+  - Room nights sold by market segment: **FIT**, **GIT**, **Corporate**  
+  - Revenue by market segment: **FIT**, **GIT**, **Corporate**  
+  - **Occupancy rate**  
+  - **Day of week**, **date**, **day type** (weekday/weekend/holiday)  
+  - **Special events** with negative, none, or positive impact  
+
+---
 ## 📊Project Overview  
 1. Regression: Predicting Daily Revenue  
    Use multiple regression models to predict **total daily revenue** using:   

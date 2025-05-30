@@ -1,4 +1,4 @@
-# 🏨Machine Learning Project - Hotel Performance Analysis using Regression and Classification   
+# 🏨ML Project - Hotel Performance Analysis using Regression and Classification   
   
 ## 📊Project Overview 
 This project uses a synthetic 365-day dataset to explore and model hotel performance using machine learning techniques. It is divided into three parts:  

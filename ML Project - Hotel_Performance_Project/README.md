@@ -86,5 +86,8 @@ conda activate hotel-ml
 pip install -r requirements.txt
 ```
 ⚠️ Note: Python 3.10 is recommended to ensure compatibility,
-but you can change the version if needed.
-Also, you can replace hotel-ml with any environment name you prefer.
+but you can change the version if needed.  
+Also, you can replace hotel-ml with any environment name you prefer.  
+  
+---
+📷 Example Results  

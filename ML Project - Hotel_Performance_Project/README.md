@@ -3,7 +3,7 @@
   
 This project uses a synthetic 365-day dataset to explore and model hotel performance using machine learning techniques. It is divided into three parts:  
 - **Regression** – Predict hotel revenue
-- **Classification** – Predict whether occupancy is high (>60%) or low (≤60%)
+- **Classification** – Predict whether occupancy is high (≥60%) or low (<60%)
 - **Classification** – Classify the number of day types based on revenue and ADR to support price tiering
   
 ---  
@@ -23,7 +23,7 @@ Project Overview
    **Goal**: Estimate expected revenue based on operational and calendar variables.  
 ---  
 2. Classification: Predicting Occupancy Levels
-   Classify whether a day will have **high occupancy (>60%)** or **low occupancy (≤60%)** using:
+   Classify whether a day will have **high occupancy (≥60%)** or **low occupancy (<60%)** using:
 
    **Features**:
    - Day of the month (1st–31st)
@@ -37,7 +37,7 @@ Project Overview
    **Goal**: Identify key factors influencing occupancy fluctuations.
 ---
 3. Classification: Grouping Day Types for Pricing Tiers
-   Use clustering to determine how many **distinct day types** (e.g., low-, mid-, high-tier) should exist based on:
+   Use clustering to assess whether the **traditional day types**, weekday, weekend, holiday, are sufficient, or if **more refined day types** should be created to better support pricing strategies.  
 
    **Features**:
    - Room nights sold by market: FIT, GIT, Corp
@@ -46,5 +46,5 @@ Project Overview
    **Model**:
    - K-Means Clustering
   
-   **Goal**: Support pricing strategy by grouping similar performance days.
+   **Goal**: Identify potential new day types (e.g., peak-season weekday, Saturday, event-driven weekend) based on performance patterns, to support more effective pricing tiers beyond the standard 3-category system.  
    

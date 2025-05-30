@@ -8,11 +8,17 @@ This project uses a synthetic 365-day dataset to explore and model hotel perform
 ---  
 ## 🧪 Dataset  
 - The dataset is **synthetic**, generated to simulate realistic hotel performance across 365 days.
-- Fields include:  
-  - Room nights sold by market segment: **FIT**, **GIT**, **Corporate**  
-  - Revenue by market segment: **FIT**, **GIT**, **Corporate**  
+- Fields include:
+  - **Date** column (used to derive day in month)
+  - **Day of week** column (explicitly provided)  
+  - **Room nights sold** by market segment:  
+    - **FIT**, **GIT**, **Corporate**  
+    - Plus a **Total** column (sum of all segments) — **not used in modeling**  
+  - **Revenue** by market segment:  
+    - **FIT**, **GIT**, **Corporate**  
+    - Plus a **Total** column — **not used in modeling**  
   - **Occupancy rate**  
-  - **Day of week**, **date**, **day type** (weekday/weekend/holiday)  
+  - **Day type**: weekday, weekend, or holiday    
   - **Special events** with negative, none, or positive impact  
 
 ---

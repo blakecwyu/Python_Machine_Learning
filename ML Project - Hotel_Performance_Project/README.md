@@ -31,7 +31,7 @@ The analysis is based on a synthetic dataset simulating realistic hotel performa
 1. Regression: Predicting Daily Revenue  
    Use multiple regression models to predict **total daily revenue**   
    
-   **Features used**:
+   **Features**:
    - Room nights sold by market: FIT, GIT, Corp
    - Occupancy rate
    - Day of week (Monday–Sunday)

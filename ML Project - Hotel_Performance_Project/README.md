@@ -13,7 +13,7 @@ This notebook-based project applies both regression and classification models to
 ## 🧪 Dataset  
 - The dataset is **synthetic**, generated to simulate realistic hotel performance across 365 days.
 - Fields include:
-  - `date`: Calender date with 365 days in 2023. (used to derive values of day and month)
+  - `date`: Calender date in 2023 (used to derive values of day and month)
   - `dayofweek`: Day name (e.g., Monday–Sunday)
   - `daytype`: Weekday, Peak, or Holiday (Peak includes Fridays to Sundays, the day before a holiday, and the last day of a holiday)
   - `special_event`: Whether a special event occurs (negative, none, or positive)  

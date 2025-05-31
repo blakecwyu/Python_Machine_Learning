@@ -1,3 +1,5 @@
+📘 **中文版本請見下方**｜[Scroll down for Mandarin version]  
+  
 # 🏨ML Project - Hotel Performance Analysis using Regression and Classification   
   
 ## 📊Project Overview  

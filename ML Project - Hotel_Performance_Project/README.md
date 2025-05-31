@@ -95,10 +95,14 @@ Also, you can replace hotel-ml with any environment name you prefer.
 ## 📷 Results  
 - Correlation plots show that total revenue has a **positive relationship** with FIT room nights, occupancy rate, Saturdays, and holidays. Although GIT and Corporate room nights help fill low-demand days, they are **negatively correlated** with total revenue, likely due to lower average rates in those segments.  
   **This may support future strategies for room distribution across different market segments.**  
-- Both **Linear Regression** and **Random Forest Regression** were used to predict revenue and average daily rate for future dates, providing insight to support pricing strategies.  
-- The initial **Decision Tree** for occupancy classification was overfitting. After pruning and tuning, the model improved. Based on the final tree, we should pay closer attention to **Tuesdays during the beginning and end of each month**. However, the tree didn’t reveal highly informative patterns overall. This suggests that **day of month, day of week, day type, and special event** may not be sufficient or strongly correlated with occupancy.  
-  **Based on domain experience and the correlation heatmap**, adding the **month** as a feature may improve classification, as **seasonality** plays a significant role in hospitality and tourism.  
-- **K-Means clustering** suggests there may be **6–8 distinct day types**, beyond the current weekday/peak/holiday categorization, supporting the idea of more granular pricing tiers.  
+- Section 1, **Regression: Predicting Daily Revenue**  
+  - Both **Linear Regression** and **Random Forest Regression** were used to predict revenue and average daily rate for future dates, providing insight to support pricing strategies.
+- Section 2, **Classification: Predicting Occupancy Levels**  
+  - The initial **Decision Tree** for occupancy classification was overfitting. After pruning and tuning, the model improved. Based on the final tree, we should pay closer attention to **Tuesdays during the beginning and end of each month**. However, the tree didn’t reveal highly informative patterns overall. This suggests that **day of month, day of week, day type, and special event** may not be sufficient or strongly correlated with occupancy.  
+    **Based on domain experience and the correlation heatmap**, adding the **month** as a feature may improve classification, as **seasonality** plays a significant role in hospitality and tourism.
+  - Currently, the occupancy classification includes all segments, but in practice, GIT and Corporate bookings are used to fill low-demand days and do not follow a consistent weekly pattern. Since GIT availability is seasonal and irregular, it may introduce noise into the model. A future version could classify based on FIT-only occupancy or revenue, providing a clearer signal for organic demand and helping to determine when GIT/Corp support is needed.
+- Section 3, **Classification: Grouping Day Types for Pricing Tiers**  
+  - **K-Means clustering** suggests there may be **6–8 distinct day types**, beyond the current weekday/peak/holiday categorization, supporting the idea of more granular pricing tiers.  
   From experience, we may consider separating **Saturdays** from other peak days, or defining **special weekday/peak patterns** during **seasonal breaks** (e.g., summer or winter holidays).  
   This refined day type classification could also provide **a new perspective** that may help improve the accuracy of both regression and occupancy classification models.  
 - Visualizations include **correlation heatmaps**, **decision tree diagrams**, and **cluster visualizations** (see notebook).
@@ -110,7 +114,8 @@ Also, you can replace hotel-ml with any environment name you prefer.
 - **Refine the day type classification** to better reflect pricing behavior and occupancy patterns, potentially improving model accuracy.  
 - **Incorporate external factors** such as weather conditions or citywide events, which may have a strong influence on occupancy and revenue.  
 - **Leverage historical competitor performance data** (e.g., from benchmarking reports) to better position the hotel's pricing and predict market behavior.  
-  *Note: This would require real-world data sources and is not applicable to the current synthetic dataset.*  
+  *Note: This would require real-world data sources and is not applicable to the current synthetic dataset.*
+- **Refine classification targets** by focusing on **FIT-only occupancy or revenue**, reducing noise from inconsistent GIT/Corp availability and better identifying truly low-demand days.  
 - **Develop an interactive dashboard** to visualize trends, model outputs, and support decision-making by hotel management.  
 - **Apply the models to a full future year** for forward-looking predictions to support pricing strategy and resource planning.
   

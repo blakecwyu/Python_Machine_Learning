@@ -167,7 +167,7 @@ All analysis and code are intended for non-commercial academic use.
    - `occ` 住房率
    - `dayofweek` 星期幾 (星期一～星期日)
   
-   **Models**:
+   **模型**:
    - Multiple Linear Regression
    - Random Forest Regression
   
@@ -182,10 +182,10 @@ All analysis and code are intended for non-commercial academic use.
    - `daytype` 日別: 平日, 旺日, 假日
    - `special_event` 特殊事件: Negative / None / Positive
 
-   **Model**:
+   **模型**:
    - Decision Tree Classifier
 
-   **Goal**: 識別影響入住率的關鍵因素
+   **目的**: 識別影響入住率的關鍵因素
 ---  
 3. 分群分析：日別劃分以做為訂價層級參考
    使用分群分析來判斷現有的日別類型（平日、旺日、假日）是否足夠，或是否應該建立更細緻的日別類型，以更有效地支援定價策略   
@@ -194,10 +194,10 @@ All analysis and code are intended for non-commercial academic use.
    - `rn_fit, rn_git, rn_corp` 各市場房晚數: FIT, GIT, Corp  
    - `rev_fit, rev_git, rev_corp` 各市場營收: FIT, GIT, Corp  
 
-   **Model**:
+   **模型**:
    - K-Means Clustering
   
-   **Goal**: 根據飯店績效趨勢進行劃分，尋找潛在的新日別類型（例如：旺季平日、星期六、有活動的週末），以建立比原始三分類系統（平日、旺日、假日）更有效的定價級距。  
+   **目的**: 根據飯店績效趨勢進行劃分，尋找潛在的新日別類型（例如：旺季平日、星期六、有活動的週末），以建立比原始三分類系統（平日、旺日、假日）更有效的定價級距。  
 
 ---  
 ## 📁 專案結構  
@@ -242,13 +242,13 @@ pip install -r requirements.txt
 ## 🚀 未來改進方向  
 - **擴充資料** 加入更多年份的歷史資料，以更全面反映季節性與異常波動。  
 - **使用真實資料進行訓練與驗證** 以提升準確度與泛化能力.  
-- **重新定義日別類型** 以更精準反映出飯店價格與績效趨勢，並提升模組準確度。  
+- **重新定義日別類型** 以更精準反映出飯店價格與績效趨勢，並提升模型準確度。  
 - **納入外部因素** 例如氣候或大型活動可能會對住房率和營收有重要的影響。  
 - **參考歷史競爭對手資料** 以更進一步探索價格及市場趨勢。    
   *註: 需使用真實世界資料，不適用於本合成資料*  
 - **重新定義分群目標** 以**單純散客**為主進行分群，排除團客及商務客不穩定所帶來的雜訊，以更準確判斷低需求日。    
 - **建立互動式儀表板** 以供經營管理團隊參考趨勢及預測。  
-- **應用於未來整年度資料** 以模組預測結果來做為營運與定價策略的參考。  
+- **應用於未來整年度資料** 以模型預測結果來做為營運與定價策略的參考。  
   
 ---
 ## 📄 授權聲明    

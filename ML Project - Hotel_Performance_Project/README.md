@@ -4,7 +4,8 @@
 This notebook-based project applies machine learning techniques to support better operational and pricing decisions by revealing patterns in demand, occupancy, and revenue across different day types and market segments. It is divided into three parts:  
 - **Regression** – Predict hotel revenue  
 - **Classification** – Predict whether occupancy is high (≥60%) or low (<60%)  
-- **Classification** – Classify the number of day types based on revenue and ADR to support price tiering.  
+- **Classification** – Classify the number of day types based on revenue and ADR to support price tiering.
+
 The analysis is based on a synthetic dataset simulating realistic hotel performance over a full year (365 days).  
   
 ---  

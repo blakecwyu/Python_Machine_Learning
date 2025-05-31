@@ -127,9 +127,9 @@ This project uses synthetic data generated solely for educational and demonstrat
 All analysis and code are intended for non-commercial academic use.  
 
 ---
-
-
-  
+   
+   
+   
 # 🏨機器學習專案 - 使用迴歸模型與分群模型分析飯店營運績效  
 ## 📊專案概述  
 本專案使用 Jupyter Notebook，透過機器學習分析不同日別與市場區隔下的需求、住房率與營收趨勢，協助改善營運與訂價策略。專案分為三個部分：  

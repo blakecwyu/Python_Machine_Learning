@@ -202,26 +202,26 @@ All analysis and code are intended for non-commercial academic use.
 ---  
 ## 📁 專案結構  
 ML Project - Hotel_Performance_project/  
-├── Hotel Performance Prediction.ipynb # Jupyter notebook with full project (EDA, models, results)  
-├── Mock_Hotel_daily.csv # Synthetic dataset (365 days)  
-├── README.md # Project overview and usage  
-└── requirements.txt # Python dependencies for pip installation  
+├── Hotel Performance Prediction.ipynb # Jupyter Notebook完整專案內容  
+├── Mock_Hotel_daily.csv # 模擬資料 (365天)  
+├── README.md # 本說明文件  
+└── requirements.txt # Python 套件需求檔  
 
 ---  
 ## 🔧 安裝方式  
-### Option 1: With pip  
+### 使用 pip  
 ```bash  
 pip install -r requirements.txt  
 ```
-### Option 2: With Conda  
-You can manually create a conda environment and install packages listed in requirements.txt:  
+### Option 2: 使用 conda  
+您可以手動建立 Conda 環境並安裝 requirements.txt 中列出的套件:  
 ```
 conda create -n hotel-ml python=3.10  
 conda activate hotel-ml  
 pip install -r requirements.txt
 ```
-⚠️ Note: Python 3.10 is recommended to ensure compatibility, but you can change the version if needed.  
-Also, you can replace hotel-ml with any environment name you prefer.  
+⚠️ 注意：建議使用 Python 3.10 以確保相容性，但您也可以根據需要更換版本。  
+此外，hotel-ml僅為示範用的環境名稱，您可以自由替換為您偏好的名稱。  
   
 ---
 ## 📷 結果摘要  

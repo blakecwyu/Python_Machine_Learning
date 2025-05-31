@@ -13,17 +13,16 @@ This notebook-based project applies both regression and classification models to
 ## 🧪 Dataset  
 - The dataset is **synthetic**, generated to simulate realistic hotel performance across 365 days.
 - Fields include:
-  - **Date** column (used to derive day in month)
-  - **Day of week** column (explicitly provided)  
-  - **Room nights sold** by market segment:  
-    - **FIT**, **GIT**, **Corporate**  
-    - Plus a **Total** column (sum of all segments) — **not used in modeling**  
-  - **Revenue** by market segment:  
-    - **FIT**, **GIT**, **Corporate**  
-    - Plus a **Total** column — **not used in modeling**  
-  - **Occupancy rate**  
-  - **Day type**: weekday, peak, or holiday (Peak includes Fridays to Sundays, the day before a holiday, and the last day of a holiday)   
-  - **Special events** with negative, none, or positive impact  
+  - `date`: Calender date with 365 days in 2023. (used to derive day in month)
+  - `dayofweek`: Day name (e.g., Monday–Sunday)
+  - `daytype`: Weekday, Peak, or Holiday (Peak includes Fridays to Sundays, the day before a holiday, and the last day of a holiday)
+  - `special_event`: Whether a special event occurs (negative, none, or positive)  
+  - `rn_fit, rn_git, rn_corp`: Room nights sold in **FIT**(Free Independent Traveler), **GIT**(Group Inclusive Tour), **Corporate** market segments  
+  - `adr_fit, adr_git, adr_corp`: Average Daily Rate(ADR) in market segments  
+  - `rev_fit, rev_git, rev_corp`: Revenue in market segments  
+  - `occ`: Occupancy rate in percentage  
+  - `rn_ttl, adr_ttl, rev_ttl`: Total values across all market segments
+  *Note: adr = revenue / rn*
 
 --- 
 ## 🔬 Project Sections

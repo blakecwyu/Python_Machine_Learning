@@ -30,7 +30,7 @@ The analysis is based on a synthetic dataset simulating realistic hotel performa
 
 --- 
 ## 🔬 Project Sections
-1. Regression: Predicting Daily Revenue  
+1. Regression: Predicting Hotel Performance  
    Use multiple regression models to predict **total daily revenue**   
    
    **Features**:
@@ -159,45 +159,45 @@ All analysis and code are intended for non-commercial academic use.
 
 --- 
 ## 🔬 專案內容
-1. Regression: Predicting Daily Revenue  
-   Use multiple regression models to predict **total daily revenue**   
+1. 迴歸分析：預測飯店績效  
+   使用兩種迴歸分析來預測**每日營收**   
    
    **Features**:
-   - Room nights sold by market: FIT, GIT, Corp
-   - Occupancy rate
-   - Day of week (Monday–Sunday)
+   - `rn_fit, rn_git, rn_corp` 各市場房晚數: FIT, GIT, Corp
+   - `occ` 住房率
+   - `dayofweek` 星期幾 (星期一～星期日)
   
    **Models**:
    - Multiple Linear Regression
    - Random Forest Regression
   
-   **Goal**: Estimate expected revenue based on operational and calendar variables.  
+   **目的**: 以日期及住房率特徵，預測未來日期之營收，協助訂價決策  
 ---  
-2. Classification: Predicting Occupancy Levels  
-   Classify whether a day will have **high occupancy (≥60%)** or **low occupancy (<60%)**  
+2. 分群分析：預測住房率高低  
+   判斷某日是否會成為**高住房日（≥60%）**或**低住房日（<60%）**  
 
    **Features**:
-   - Day of the month (1st–31st)
-   - Day of week (Monday–Sunday)
-   - Day type: Weekday, Peak, Holiday
-   - Special event impact: Negative / None / Positive
+   - `day` 日期 (1日至31日)
+   - `dayofweek` 星期幾 (星期一～星期日)
+   - `daytype` 日別: 平日, 旺日, 假日
+   - `special_event` 特殊事件: Negative / None / Positive
 
    **Model**:
    - Decision Tree Classifier
 
-   **Goal**: Identify key factors influencing occupancy fluctuations.
+   **Goal**: 識別影響入住率的關鍵因素
 ---  
-3. Classification: Grouping Day Types for Pricing Tiers  
-   Use clustering to identify whether the **existing day types**, weekday, peak, holiday, are sufficient, or if more **refined day types** should be created to better support pricing strategies.  
+3. 分群分析：日別劃分以做為訂價層級參考
+   使用分群分析來判斷現有的日別類型（平日、旺日、假日）是否足夠，或是否應該建立更細緻的日別類型，以更有效地支援定價策略   
 
    **Features**:
-   - Room nights sold by market: FIT, GIT, Corp
-   - Revenue by market: FIT, GIT, Corp
+   - `rn_fit, rn_git, rn_corp` 各市場房晚數: FIT, GIT, Corp  
+   - `rev_fit, rev_git, rev_corp` 各市場營收: FIT, GIT, Corp  
 
    **Model**:
    - K-Means Clustering
   
-   **Goal**: Identify potential new day types (e.g., peak-season weekday, Saturday, event-driven weekend) based on performance patterns, to support more effective pricing tiers beyond the standard 3-category system.  
+   **Goal**: 根據飯店績效趨勢進行劃分，尋找潛在的新日別類型（例如：旺季平日、星期六、有活動的週末），以建立比原始三分類系統（平日、旺日、假日）更有效的定價級距。  
 
 ---  
 ## 📁 專案結構  

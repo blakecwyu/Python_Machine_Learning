@@ -29,7 +29,7 @@ The analysis is based on a synthetic dataset simulating realistic hotel performa
 --- 
 ## 🔬 Project Sections
 1. Regression: Predicting Daily Revenue  
-   Use multiple regression and random forest regression models to predict **total daily revenue** using:   
+   Use multiple regression models to predict **total daily revenue** using:   
    
    **Features used**:
    - Room nights sold by market: FIT, GIT, Corp

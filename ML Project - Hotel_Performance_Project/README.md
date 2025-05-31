@@ -43,7 +43,7 @@ This notebook-based project applies both regression and classification models to
   
    **Goal**: Estimate expected revenue based on operational and calendar variables.  
 ---  
-2. Classification: Predicting Occupancy Levels
+2. Classification: Predicting Occupancy Levels  
    Classify whether a day will have **high occupancy (≥60%)** or **low occupancy (<60%)** using:
 
    **Features**:
@@ -57,7 +57,7 @@ This notebook-based project applies both regression and classification models to
 
    **Goal**: Identify key factors influencing occupancy fluctuations.
 ---  
-3. Classification: Grouping Day Types for Pricing Tiers
+3. Classification: Grouping Day Types for Pricing Tiers  
    Use clustering to identify whether the **existing day types**, weekday, peak, holiday, are sufficient, or if more **refined day types** should be created to better support pricing strategies.  
 
    **Features**:

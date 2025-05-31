@@ -11,20 +11,21 @@ This notebook-based project applies both regression and classification models to
 
 ---  
 ## 🧪 Dataset  
-- The dataset is **synthetic**, generated to simulate realistic hotel performance across 365 days.
-- Fields include:
-  - `date`: Calender date in 2023 (used to derive day and month values)
+- The dataset is **synthetic**, generated to simulate realistic hotel performance across 365 days.  
+- Fields include:  
+  - `date`: Calender date in 2023 (used to derive day and month values)  
   - `dayofweek`: Day name (e.g., Monday–Sunday)
   - `daytype`: Weekday, Peak, or Holiday  
     - *Peak* includes Fridays to Sundays, the day before a holiday, and the last day of a holiday  
     - *Holiday* refers to holidays that span **more than one day**, typically combining with a weekend. One-day holidays are not labeled as "Holiday" in this field.  
-  - `special_event`: Whether a special event occurs (negative, none, or positive)  
+  - `special_event`: Indicates whether a special event occurs (negative, none, or positive)  
   - `rn_fit, rn_git, rn_corp`: Room nights sold in **FIT**(Free Independent Traveler), **GIT**(Group Inclusive Tour), **Corporate** market segments  
-  - `adr_fit, adr_git, adr_corp`: Average Daily Rate(ADR) in market segments  
-  - `rev_fit, rev_git, rev_corp`: Revenue in market segments  
-  - `occ`: Occupancy rate in percentage  
+  - `adr_fit, adr_git, adr_corp`: Average Daily Rate (ADR) in each market segments  
+  - `rev_fit, rev_git, rev_corp`: Revenue generated in each market segments  
+  - `occ`: Occupancy rate (percentage)  
   - `rn_ttl, adr_ttl, rev_ttl`: Total values across all market segments  
-*Note: adr = revenue / rn*  
+
+*Note: ADR (Average Daily Rate) = Revenue / Room Nights Sold*  
 
 --- 
 ## 🔬 Project Sections

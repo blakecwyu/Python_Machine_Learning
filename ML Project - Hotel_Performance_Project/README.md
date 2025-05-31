@@ -29,7 +29,7 @@ The analysis is based on a synthetic dataset simulating realistic hotel performa
 --- 
 ## 🔬 Project Sections
 1. Regression: Predicting Daily Revenue  
-   Use multiple regression models to predict **total daily revenue** using:   
+   Use multiple regression models to predict **total daily revenue**   
    
    **Features used**:
    - Room nights sold by market: FIT, GIT, Corp
@@ -43,7 +43,7 @@ The analysis is based on a synthetic dataset simulating realistic hotel performa
    **Goal**: Estimate expected revenue based on operational and calendar variables.  
 ---  
 2. Classification: Predicting Occupancy Levels  
-   Classify whether a day will have **high occupancy (≥60%)** or **low occupancy (<60%)** using:
+   Classify whether a day will have **high occupancy (≥60%)** or **low occupancy (<60%)**  
 
    **Features**:
    - Day of the month (1st–31st)

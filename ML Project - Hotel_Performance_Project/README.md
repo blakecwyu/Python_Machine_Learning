@@ -1,11 +1,14 @@
 # 🏨ML Project - Hotel Performance Analysis using Regression and Classification   
   
-## 📊Project Overview 
 This project uses a synthetic 365-day dataset to explore and model hotel performance using machine learning techniques. It is divided into three parts:  
 - **Regression** – Predict hotel revenue
 - **Classification** – Predict whether occupancy is high (≥60%) or low (<60%)
 - **Classification** – Classify the number of day types based on revenue and ADR to support price tiering
-  
+
+---
+## 📊Project Overview 
+This notebook-based project applies both regression and classification models to analyze hotel data. It aims to support better operational and pricing decisions by revealing patterns in demand, occupancy, and revenue across different day types and market segments.  
+
 ---  
 ## 🧪 Dataset  
 - The dataset is **synthetic**, generated to simulate realistic hotel performance across 365 days.
@@ -19,7 +22,7 @@ This project uses a synthetic 365-day dataset to explore and model hotel perform
     - **FIT**, **GIT**, **Corporate**  
     - Plus a **Total** column — **not used in modeling**  
   - **Occupancy rate**  
-  - **Day type**: weekday, weekend, or holiday    
+  - **Day type**: weekday, peak, or holiday (Peak includes Fridays to Sundays, the day before a holiday, and the last day of a holiday)   
   - **Special events** with negative, none, or positive impact  
 
 --- 
@@ -44,7 +47,7 @@ This project uses a synthetic 365-day dataset to explore and model hotel perform
    **Features**:
    - Day of the month (1st–31st)
    - Day of week (Monday–Sunday)
-   - Day type: Weekday, Weekend, Holiday
+   - Day type: Weekday, Peak, Holiday
    - Special event impact: Negative / None / Positive
 
    **Model**:
@@ -53,7 +56,7 @@ This project uses a synthetic 365-day dataset to explore and model hotel perform
    **Goal**: Identify key factors influencing occupancy fluctuations.
 ---  
 3. Classification: Grouping Day Types for Pricing Tiers
-   Use clustering to assess whether the **traditional day types**, weekday, weekend, holiday, are sufficient, or if **more refined day types** should be created to better support pricing strategies.  
+   Use clustering to identify whether the **existing day types**, weekday, peak, holiday, are sufficient, or if more **refined day types** should be created to better support pricing strategies.  
 
    **Features**:
    - Room nights sold by market: FIT, GIT, Corp
@@ -85,13 +88,20 @@ conda create -n hotel-ml python=3.10
 conda activate hotel-ml  
 pip install -r requirements.txt
 ```
-⚠️ Note: Python 3.10 is recommended to ensure compatibility,
-but you can change the version if needed.  
+⚠️ Note: Python 3.10 is recommended to ensure compatibility, but you can change the version if needed.  
 Also, you can replace hotel-ml with any environment name you prefer.  
   
 ---
 ## 📷 Example Results  
-
+- Correlation plots show that total revenue has a **positive relationship** with FIT room nights, occupancy rate, Saturdays, and holidays. Although GIT and Corporate room nights help fill low-demand days, they are **negatively correlated** with total revenue, likely due to lower average rates in those segments.  
+  **This may support future strategies for room distribution across different market segments.**  
+- Both **Linear Regression** and **Random Forest Regression** were used to predict revenue and average daily rate for future dates, providing insight to support pricing strategies.  
+- The initial **Decision Tree** for occupancy classification was overfitting. After pruning and tuning, the model improved. Based on the final tree, we should pay closer attention to **Tuesdays during the beginning and end of each month**. However, the tree didn’t reveal highly informative patterns overall. This suggests that **day of month, day of week, day type, and special event** may not be sufficient or strongly correlated with occupancy.  
+  **Based on domain experience and the correlation heatmap**, adding the **month** as a feature may improve classification, as **seasonality** plays a significant role in hospitality and tourism.  
+- **K-Means clustering** suggests there may be **6–8 distinct day types**, beyond the current weekday/peak/holiday categorization, supporting the idea of more granular pricing tiers.  
+  From experience, we may consider separating **Saturdays** from other peak days, or defining **special weekday/peak patterns** during **seasonal breaks** (e.g., summer or winter holidays).  
+  This refined day type classification could also provide **a new perspective** that may help improve the accuracy of both regression and occupancy classification models.  
+- Visualizations include **correlation heatmaps**, **decision tree diagrams**, and **cluster visualizations** (see notebook).  
 ---
 ## 🚀 Future Improvements  
 

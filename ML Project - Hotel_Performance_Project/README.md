@@ -94,7 +94,7 @@ Also, you can replace hotel-ml with any environment name you prefer.
   
 ---
 ## 📷 Results  
-- Correlation heatmap show that total revenue has a **positive relationship** with FIT room nights, occupancy rate, Saturdays, and Holidays. Although GIT and Corporate room nights help fill low-demand days, they are **negatively correlated** with total revenue, likely due to lower average rates in those segments.  
+- Correlation heatmap shows that total revenue has a **positive relationship** with FIT room nights, occupancy rate, Saturdays, and Holidays. Although GIT and Corporate room nights help fill low-demand days, they are **negatively correlated** with total revenue, likely due to lower average rates in those segments.  
   **This insight may support future strategies for room distribution across different market segments.**  
 - Section 1: **Regression - Predicting Daily Revenue**  
   - Both **Linear Regression** and **Random Forest Regression** were used to predict revenue and average daily rate for future dates, providing insight to support pricing strategies.

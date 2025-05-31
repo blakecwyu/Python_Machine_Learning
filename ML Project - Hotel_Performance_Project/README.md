@@ -1,4 +1,4 @@
-📘 **中文版本請見下方**｜[Scroll down for Mandarin version]  
+📘 **中文版本請往下滑動查看**｜[Scroll down for Mandarin version]  
   
 # 🏨ML Project - Hotel Performance Analysis using Regression and Classification   
   

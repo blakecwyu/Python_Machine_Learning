@@ -225,30 +225,30 @@ pip install -r requirements.txt
   
 ---
 ## 📷 結果摘要  
-- Correlation heatmap shows that total revenue has a **positive relationship** with FIT room nights, occupancy rate, Saturdays, and Holidays. Although GIT and Corporate room nights help fill low-demand days, they are **negatively correlated** with total revenue, likely due to lower average rates in those segments.  
-  **This insight may support future strategies for room distribution across different market segments.**  
-- Section 1: **Regression - Predicting Daily Revenue**  
-  - Both **Linear Regression** and **Random Forest Regression** were used to predict revenue and average daily rate for future dates, providing insight to support pricing strategies.
-- Section 2: **Classification - Predicting Occupancy Levels**  
-  - The initial **Decision Tree** for occupancy classification showed overfitting. After pruning and tuning, the model improved. Based on the final tree, we should pay closer attention to **Tuesdays during the beginning and end of each month**.  
-  - However, the tree didn’t reveal highly informative patterns overall. This suggests that **day of month, day of week, day type, and special event** may not be sufficient or strongly correlated with occupancy. Based on **domain experience and the correlation heatmap**, adding the **month** as a feature may improve classification, as **seasonality** plays a significant role in hospitality and tourism.  
-  - Currently, the occupancy classification includes **all segments**, but in practice, **GIT and Corporate bookings** are used to fill low-demand days and do not follow a consistent weekly pattern. Since GIT availability is seasonal and irregular, it may introduce noise into the model. A future version could classify based on **FIT-only occupancy or revenue**, providing a clearer signal for organic demand and helping to determine when **GIT/Corp support** is needed.
-- Section 3: **Classification - Grouping Day Types for Pricing Tiers**  
-  - **K-Means clustering** suggests there may be **6–8 distinct day types**, beyond the current weekday/peak/holiday categorization, supporting the idea of more granular pricing tiers.
-  - Based on **domain experience**, we may consider separating **Saturdays** from other peak days, or defining **special weekday/peak patterns** during **seasonal breaks** (e.g., summer or winter holidays). This refined day type classification could also provide **a new perspective** that may help improve the accuracy of both regression and occupancy classification models.  
-- Visualizations include **correlation heatmaps**, **decision tree diagrams**, and **cluster visualizations** (see notebook).
+- 從Crrelation Heatmap得出，總營收與 FIT 間夜、住房率、週六與假日有**正相關**；GIT 與 Corp 有**負相關**，可能因其平均房價較低。  
+  **這有助於未來分配各市場房間策略。**   
+- 第1部分: **迴歸分析：預測飯店績效**  
+  - 透過**線性回歸**與**隨機森林回歸**預測營收與平均房價，可用於做為未來訂價策略參考。  
+- 第2部分: **分群分析：預測住房率高低**  
+  - 初始**Decision Tree**出現過度擬合，經pruning和tuning調整後改善。結果顯示**月初與月底的星期二**需特別關注。  
+  - 模型未呈現高度可解釋性，顯示**日期、星期幾、日別與事件**等變數可能無法有效預測住房率高低。基於**產業經驗與Correlation heatmap**，建議加入**月份**作為特徵，以反映飯店業及旅遊業獨特的**季節性**。  
+  - 目前此預測住房率高低的分群分析包含**所有市場類別**，但實際上飯店常利用**團客與商務客**來填補淡日空房，並不一定有固定的每週趨勢，且團客數量更易因季節而不穩定，這些因素可能為模型帶來雜訊。未來可考慮**單純以散客**為目標進行分類，以排除團客與商務客的不穩定性，提升模型效率，並在淡日需要**團客和商務客**協助時，提供更可靠的參考。  
+- 第3部分: **分群分析：日別劃分以做為訂價層級參考**  
+  - **K-Means**顯示，相較於原始的3個日別分類，**6–8個日別**是比較適合的，可用於未來訂價層級的參考。  
+  - 基於**產業經驗**，可考慮將**週六**自旺日獨立出來，或是根據**旺季(暑假及寒假)**進行更細緻分類，調整後的分類或許也可以改善專案前兩個部分的準確性。    
+- 視覺化包括 **correlation heatmaps**, **decision tree diagrams**, and **cluster visualizations** (請見 notebook).
   
 ---
 ## 🚀 未來改進方向  
-- **Expand the dataset** by including data from multiple past years to capture seasonal trends and unusual patterns.  
-- **Train and validate models with real-world data** to improve performance and generalizability.  
-- **Refine the day type classification** to better reflect pricing behavior and occupancy patterns, potentially improving model accuracy.  
-- **Incorporate external factors** such as weather conditions or citywide events, which may have a strong influence on occupancy and revenue.  
-- **Leverage historical competitor performance data** (e.g., from benchmarking reports) to better position the hotel's pricing and predict market behavior.  
-  *Note: This would require real-world data sources and is not applicable to the current synthetic dataset.*
-- **Refine classification targets** by focusing on **FIT-only occupancy or revenue**, reducing noise from inconsistent GIT/Corp availability and better identifying truly low-demand days.  
-- **Develop an interactive dashboard** to visualize trends, model outputs, and support decision-making by hotel management.  
-- **Apply the models to a full future year** for forward-looking predictions to support pricing strategy and resource planning.
+- **擴充資料** 加入更多年份的歷史資料，以更全面反映季節性與異常波動。  
+- **使用真實資料進行訓練與驗證** 以提升準確度與泛化能力.  
+- **重新定義日別類型** 以更精準反映出飯店價格與績效趨勢，並提升模組準確度。  
+- **納入外部因素** 例如氣候或大型活動可能會對住房率和營收有重要的影響。  
+- **參考歷史競爭對手資料** 以更進一步探索價格及市場趨勢。    
+  *註: 需使用真實世界資料，不適用於本合成資料*  
+- **重新定義分群目標** 以**單純散客**為主進行分群，排除團客及商務客不穩定所帶來的雜訊，以更準確判斷低需求日。    
+- **建立互動式儀表板** 以供經營管理團隊參考趨勢及預測。  
+- **應用於未來整年度資料** 以模組預測結果來做為營運與定價策略的參考。  
   
 ---
 ## 📄 授權聲明    

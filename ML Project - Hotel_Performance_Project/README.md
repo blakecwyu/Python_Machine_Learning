@@ -22,7 +22,7 @@ This notebook-based project applies both regression and classification models to
   - `rev_fit, rev_git, rev_corp`: Revenue in market segments  
   - `occ`: Occupancy rate in percentage  
   - `rn_ttl, adr_ttl, rev_ttl`: Total values across all market segments  
-  *Note: adr = revenue / rn*  
+*Note: adr = revenue / rn*  
 
 --- 
 ## 🔬 Project Sections

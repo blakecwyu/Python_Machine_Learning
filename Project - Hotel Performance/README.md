@@ -143,16 +143,16 @@ All analysis and code are intended for non-commercial academic use.
 ## 🧪 資料集  
 - 資料為合成資料，模擬 2023 年度 365 天的飯店營運表現。  
 - 欄位包含：  
-  - `date`: 2023年日期（用以推導月份與日期）  
-  - `dayofweek`: 星期幾（例如：星期一～星期日）  
+  - `date`: 2023年日期(用以推導月份與日期)  
+  - `dayofweek`: 星期幾(例如：星期一～星期日)  
   - `daytype`: 日別，平日、旺日、假日  
-    - *旺日* 包含星期五至星期日、假日前一天、與假期最後一天  
-    - *假日* 指連續假期（不包含只有一天的國定假日）  
-  - `special_event`: 是否有特殊事件（負面, 無, 正面）  
-  - `rn_fit, rn_git, rn_corp`: 各市場 **FIT**(散客), **GIT**(團客), **Corp**(商務) 房晚數  
-  - `adr_fit, adr_git, adr_corp`: 各市場平均房價（ADR）  
+    - *旺日* 包含星期五至星期日、假日前一天、假期最後一天、單日假日  
+    - *假日* 指連續假期(不包含只有一天的國定假日)  
+  - `special_event`: 是否有特殊事件(負面、無、正面)  
+  - `rn_fit, rn_git, rn_corp`: 各市場**FIT**(散客)、**GIT**(團客)、**Corp**(商務)房晚數  
+  - `adr_fit, adr_git, adr_corp`: 各市場平均房價(ADR)  
   - `rev_fit, rev_git, rev_corp`: 各市場營收  
-  - `occ`: 住房率（百分比）  
+  - `occ`: 住房率(百分比)  
   - `rn_ttl, adr_ttl, rev_ttl`: 各市場總和  
 
 *註：平均房價 = 營收 / 房晚數*  
@@ -187,7 +187,7 @@ All analysis and code are intended for non-commercial academic use.
 
    **目的**: 識別影響入住率的關鍵因素
 ---  
-3. 分群分析：日別劃分以做為訂價層級參考
+3. 分群分析：日別劃分以做為訂價層級參考  
    使用分群分析來判斷現有的日別類型（平日、旺日、假日）是否足夠，或是否應該建立更細緻的日別類型，以更有效地支援定價策略   
 
    **Features**:

@@ -37,7 +37,7 @@ RevPAR = ADR * Occupancy*
   
 --- 
 ## Project Sections  
-##Hotel Performance - Statistical Analysis##  
+### Hotel Performance - Statistical Analysis  
 1. Hypothesis 1 - Seasonal ADR differences  
    *Null Hypothesis (H0): There is no significant difference in prices (ADR) between seasons.  
    Alternative Hypothesis (Ha): At least one season's prices (ADR) differs.*  
@@ -79,7 +79,7 @@ RevPAR = ADR * Occupancy*
   
    **Goal**: To explore the assumption that ADR in spring may be too high and reveal relationship between ADR and occupancy in each season.  
   
-##Hotel Performance - ML Regression and Classification##  
+### Hotel Performance - ML Regression and Classification  
 1. Regression: Predicting Hotel Performance  
    Use multiple regression models to predict **total daily revenue** and calculate ADR and RevPAR  
   

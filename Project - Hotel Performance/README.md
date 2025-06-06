@@ -1,12 +1,17 @@
 **中文版本請往下滑動查看**｜[Scroll down for Mandarin version]  
   
-# ML Project - Hotel Performance Analysis using Regression and Classification   
+# Project - Hotel Performance   
   
 ## Project Overview  
-This notebook-based project applies machine learning techniques to support better operational and pricing decisions by revealing patterns in demand, occupancy, and revenue across different day types and market segments. It is divided into three parts:  
-- **Regression** – Predict hotel revenue  
-- **Classification** – Predict whether occupancy is high (≥60%) or low (<60%)  
-- **Classification** – Classify the number of day types based on revenue and ADR to support price tiering.
+This project includes two sub-projects appllying statistical analysis and machine learning techniques to support better operational and pricing decisions by revealing patterns in demand, occupancy, and revenue across different day types and market segments. It is divided into three parts:  
+- Hotel Performance - Statistical Analysis:  
+  - **Hypothesis** - Seasonal ADR differences  
+  - **Hypothesis** - Occupancy difference between spring and summer  
+  - **Correlation** - Relationship between prices and occupancy in seasons  
+- Hotel Performance - ML Regression and Classification:  
+  - **Regression** – Predict hotel performance  
+  - **Classification** – Predicting cccupancy levels  
+  - **Classification** – Grouping day types for pricing tiers  
 
 The analysis is based on a synthetic dataset simulating realistic hotel performance over a full year (365 days).  
   
@@ -17,7 +22,7 @@ The analysis is based on a synthetic dataset simulating realistic hotel performa
   - `date`: Calender date in 2023 (used to derive day and month values)  
   - `dayofweek`: Day name (e.g., Monday–Sunday)
   - `daytype`: Weekday, Peak, or Holiday  
-    - *Peak* includes Fridays to Sundays, the day before a holiday, and the last day of a holiday  
+    - *Peak* includes Fridays to Sundays, the day before a holiday, the last day of a holiday, and one-day holiday.  
     - *Holiday* refers to holidays that span **more than one day**, typically combining with a weekend. One-day holidays are not labeled as "Holiday" in this field.  
   - `special_event`: Indicates whether a special event occurs (negative, none, or positive)  
   - `rn_fit, rn_git, rn_corp`: Room nights sold in **FIT**(Free Independent Traveler), **GIT**(Group Inclusive Tour), **Corporate** market segments  
@@ -26,55 +31,105 @@ The analysis is based on a synthetic dataset simulating realistic hotel performa
   - `occ`: Occupancy rate (percentage)  
   - `rn_ttl, adr_ttl, rev_ttl`: Total values across all market segments  
 
-*Note: ADR (Average Daily Rate) = Revenue / Room Nights Sold*  
+*Note:  
+ADR = Revenue / Room Nights Sold  
+RevPAR = ADR * Occupancy*  
 
 --- 
-## Project Sections
+## Project Sections  
+###Hotel Performance - Statistical Analysis###  
+1. Hypothesis 1 - Seasonal ADR differences  
+   *Null Hypothesis (H0): There is no significant difference in prices (ADR) between seasons. 
+   Alternative Hypothesis (Ha): At least one season's prices (ADR) differs.*  
+  
+   **Features**:
+   - Seasons (Spring, Summer, Fall, Winter)  
+   - ADR
+  
+   **Models**:
+   - One-way ANOVA
+   - Tukey's Range Test
+  
+   **Goal**: To prove seasonality in hospitality industry and support pricing strategy.  
+  
+2. Hypothesis 2 - Occupancy difference between spring and summer  
+   *Null Hypothesis (H0): There is no significant difference in occupancy between Spring and Summer.  
+   Alternative Hypothesis (Ha): There is a significant difference in occupancy between Spring and Summer.*
+  
+   **Features**:
+   - Seasons (Spring, Summer, Fall, Winter)  
+   - Occupancy rate  
+   
+   **Models**:
+   - two-sample t-test
+  
+   **Goal**: Based on the result of Hypothesis 1, spring and summer are not found significant difference in prices, which contradicts domain experience. Therefore, a new hypithesis based on occupancy differnece is created to explore whether the high prices in spring lead to low occupancy.  
+  
+3. Correlation - Relationship between prices and occupancy in seasons
+   A scatter plot was created for ADR vs occupancy within the spring season.  
+   Pearson correlation coefficients between ADR and occupancy for each season calculated.
+  
+   **Features**:  
+   - Seasons (Spring, Summer, Fall, Winter)  
+   - ADR  
+   - Occupancy rate  
+   
+   **Models**:  
+   - Pearson correlation coefficients
+  
+   **Goal**: To explore the assumption that ADR in spring may be too high and reveal relationship between ADR and occupancy in each season.  
+  
+###Hotel Performance - ML Regression and Classification###  
 1. Regression: Predicting Hotel Performance  
-   Use multiple regression models to predict **total daily revenue**   
+   Use multiple regression models to predict **total daily revenue** and calculate ADR and RevPAR   
    
    **Features**:
-   - Room nights sold by market: FIT, GIT, Corp
+   - Room nights sold by market (FIT, GIT, Corp)
    - Occupancy rate
    - Day of week (Monday–Sunday)
+   - Day type (Weekday, Peak, Holiday)
   
    **Models**:
    - Multiple Linear Regression
    - Random Forest Regression
   
-   **Goal**: Estimate expected revenue based on operational and calendar variables.  
----  
+   **Goal**: Estimate expected revenue based on operational and calendar variables providing insights for future pricing strategies.  
+  
 2. Classification: Predicting Occupancy Levels  
    Classify whether a day will have **high occupancy (≥60%)** or **low occupancy (<60%)**  
 
    **Features**:
    - Day of the month (1st–31st)
    - Day of week (Monday–Sunday)
-   - Day type: Weekday, Peak, Holiday
-   - Special event impact: Negative / None / Positive
+   - Day type (Weekday, Peak, Holiday)
+   - Special event impact (Negative / None / Positive)
 
    **Model**:
    - Decision Tree Classifier
 
-   **Goal**: Identify key factors influencing occupancy fluctuations.
----  
+   **Goal**: To support future pricing strategies by identifying days that are more likely to have low occupancy so that targeted promotional or pricing actions can be taken.
+  
 3. Classification: Grouping Day Types for Pricing Tiers  
    Use clustering to identify whether the **existing day types**, weekday, peak, holiday, are sufficient, or if more **refined day types** should be created to better support pricing strategies.  
 
    **Features**:
-   - Room nights sold by market: FIT, GIT, Corp
-   - Revenue by market: FIT, GIT, Corp
+   - Room nights sold by market (FIT, GIT, Corp)
+   - Revenue by market (FIT, GIT, Corp)
 
    **Model**:
-   - K-Means Clustering
+   - K-Means Clustering  
   
    **Goal**: Identify potential new day types (e.g., peak-season weekday, Saturday, event-driven weekend) based on performance patterns, to support more effective pricing tiers beyond the standard 3-category system.  
 
 ---  
 ## Project Structure  
-ML Project - Hotel_Performance_project/  
-├── Hotel Performance Prediction.ipynb # Jupyter notebook with full project (EDA, models, results)  
-├── Mock_Hotel_daily.csv # Synthetic dataset (365 days)  
+Project - Hotel Performance/  
+├── data/
+│   └── Mock_Hotel_daily.csv # Synthetic dataset (365 days) 
+├── notebooks/
+│   └── 01 - Hotel Performance - Statistical Analysis.ipynb # Jupyter notebook with statistical analysis (EDA, models, results)  
+│   └── 02 - Hotel Performance - ML Regression and Classification.ipynb # Jupyter notebook with regression and classification (EDA, models, results)  
+├── .gitignore # List of items Git not to track
 ├── README.md # Project overview and usage  
 └── requirements.txt # Python dependencies for pip installation  
 

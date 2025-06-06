@@ -1,8 +1,8 @@
-📘 **中文版本請往下滑動查看**｜[Scroll down for Mandarin version]  
+**中文版本請往下滑動查看**｜[Scroll down for Mandarin version]  
   
-# 🏨ML Project - Hotel Performance Analysis using Regression and Classification   
+# ML Project - Hotel Performance Analysis using Regression and Classification   
   
-## 📊Project Overview  
+## Project Overview  
 This notebook-based project applies machine learning techniques to support better operational and pricing decisions by revealing patterns in demand, occupancy, and revenue across different day types and market segments. It is divided into three parts:  
 - **Regression** – Predict hotel revenue  
 - **Classification** – Predict whether occupancy is high (≥60%) or low (<60%)  
@@ -11,7 +11,7 @@ This notebook-based project applies machine learning techniques to support bette
 The analysis is based on a synthetic dataset simulating realistic hotel performance over a full year (365 days).  
   
 ---  
-## 🧪 Dataset  
+## Dataset  
 - The dataset is **synthetic**, generated to simulate realistic hotel performance across 365 days.  
 - Fields include:  
   - `date`: Calender date in 2023 (used to derive day and month values)  
@@ -29,7 +29,7 @@ The analysis is based on a synthetic dataset simulating realistic hotel performa
 *Note: ADR (Average Daily Rate) = Revenue / Room Nights Sold*  
 
 --- 
-## 🔬 Project Sections
+## Project Sections
 1. Regression: Predicting Hotel Performance  
    Use multiple regression models to predict **total daily revenue**   
    
@@ -71,7 +71,7 @@ The analysis is based on a synthetic dataset simulating realistic hotel performa
    **Goal**: Identify potential new day types (e.g., peak-season weekday, Saturday, event-driven weekend) based on performance patterns, to support more effective pricing tiers beyond the standard 3-category system.  
 
 ---  
-## 📁 Project Structure  
+## Project Structure  
 ML Project - Hotel_Performance_project/  
 ├── Hotel Performance Prediction.ipynb # Jupyter notebook with full project (EDA, models, results)  
 ├── Mock_Hotel_daily.csv # Synthetic dataset (365 days)  
@@ -79,7 +79,7 @@ ML Project - Hotel_Performance_project/
 └── requirements.txt # Python dependencies for pip installation  
 
 ---  
-## 🔧 Installation  
+## Installation  
 ### Option 1: With pip  
 ```bash  
 pip install -r requirements.txt  
@@ -91,11 +91,11 @@ conda create -n hotel-ml python=3.10
 conda activate hotel-ml  
 pip install -r requirements.txt
 ```
-⚠️ Note: Python 3.10 is recommended to ensure compatibility, but you can change the version if needed.  
-Also, you can replace hotel-ml with any environment name you prefer.  
+*Note: Python 3.10 is recommended to ensure compatibility, but you can change the version if needed.  
+Also, you can replace hotel-ml with any environment name you prefer.*  
   
 ---
-## 📷 Results  
+## Results  
 - Correlation heatmap shows that total revenue has a **positive relationship** with FIT room nights, occupancy rate, Saturdays, and Holidays. Although GIT and Corporate room nights help fill low-demand days, they are **negatively correlated** with total revenue, likely due to lower average rates in those segments.  
   **This insight may support future strategies for room distribution across different market segments.**  
 - Section 1: **Regression - Predicting Daily Revenue**  
@@ -110,7 +110,7 @@ Also, you can replace hotel-ml with any environment name you prefer.
 - Visualizations include **correlation heatmaps**, **decision tree diagrams**, and **cluster visualizations** (see notebook).
   
 ---
-## 🚀 Future Improvements  
+## Future Improvements  
 - **Expand the dataset** by including data from multiple past years to capture seasonal trends and unusual patterns.  
 - **Train and validate models with real-world data** to improve performance and generalizability.  
 - **Refine the day type classification** to better reflect pricing behavior and occupancy patterns, potentially improving model accuracy.  
@@ -122,7 +122,7 @@ Also, you can replace hotel-ml with any environment name you prefer.
 - **Apply the models to a full future year** for forward-looking predictions to support pricing strategy and resource planning.
   
 ---
-## 📄 License  
+## License  
 This project uses synthetic data generated solely for educational and demonstration purposes. It does not reflect real hotel operations or confidential business information.  
 All analysis and code are intended for non-commercial academic use.  
 
@@ -130,8 +130,8 @@ All analysis and code are intended for non-commercial academic use.
    
    
    
-# 🏨機器學習專案 - 使用迴歸模型與分群模型分析飯店營運績效  
-## 📊專案概述  
+# 機器學習專案 - 使用迴歸模型與分群模型分析飯店營運績效  
+## 專案概述  
 本專案使用 Jupyter Notebook，透過機器學習分析不同日別與市場區隔下的需求、住房率與營收趨勢，協助改善營運與訂價策略。專案分為三個部分：  
 - **迴歸模型** - 使用線性迴歸與隨機森林預測每日營收與平均房價。  
 - **分群模型** – 使用決策樹分類每日住房率為高（≥60%）或低（<60%）。  
@@ -140,7 +140,7 @@ All analysis and code are intended for non-commercial academic use.
 本分析使用模擬飯店一整年的營運情形（365天）的合成資料，具備接近實際營運邏輯的結構與變異。  
   
 ---
-## 🧪 資料集  
+## 資料集  
 - 資料為合成資料，模擬 2023 年度 365 天的飯店營運表現。  
 - 欄位包含：  
   - `date`: 2023年日期(用以推導月份與日期)  
@@ -158,7 +158,7 @@ All analysis and code are intended for non-commercial academic use.
 *註：平均房價 = 營收 / 房晚數*  
 
 --- 
-## 🔬 專案內容
+## 專案內容
 1. 迴歸分析：預測飯店績效  
    使用兩種迴歸分析來預測**每日營收**   
    
@@ -200,7 +200,7 @@ All analysis and code are intended for non-commercial academic use.
    **目的**: 根據飯店績效趨勢進行劃分，尋找潛在的新日別類型（例如：旺季平日、星期六、有活動的週末），以建立比原始三分類系統（平日、旺日、假日）更有效的定價級距。  
 
 ---  
-## 📁 專案結構  
+## 專案結構  
 ML Project - Hotel_Performance_project/  
 ├── Hotel Performance Prediction.ipynb # Jupyter Notebook完整專案內容  
 ├── Mock_Hotel_daily.csv # 模擬資料 (365天)  
@@ -208,7 +208,7 @@ ML Project - Hotel_Performance_project/
 └── requirements.txt # Python 套件需求檔  
 
 ---  
-## 🔧 安裝方式  
+## 安裝方式  
 ### 使用 pip  
 ```bash  
 pip install -r requirements.txt  
@@ -220,11 +220,11 @@ conda create -n hotel-ml python=3.10
 conda activate hotel-ml  
 pip install -r requirements.txt
 ```
-⚠️ 注意：建議使用 Python 3.10 以確保相容性，但您也可以根據需要更換版本。  
-此外，hotel-ml僅為示範用的環境名稱，您可以自由替換為您偏好的名稱。  
+*注意：建議使用 Python 3.10 以確保相容性，但您也可以根據需要更換版本。  
+此外，hotel-ml僅為示範用的環境名稱，您可以自由替換為您偏好的名稱。*  
   
 ---
-## 📷 結果摘要  
+## 結果摘要  
 - 從Crrelation Heatmap得出，總營收與 FIT 間夜、住房率、週六與假日有**正相關**；GIT 與 Corp 有**負相關**，可能因其平均房價較低。  
   **這有助於未來分配各市場房間策略。**   
 - 第1部分: **迴歸分析 - 預測飯店績效**  
@@ -239,7 +239,7 @@ pip install -r requirements.txt
 - 視覺化包括 **correlation heatmaps**, **decision tree diagrams**, and **cluster visualizations** (請見 notebook).
   
 ---
-## 🚀 未來改進方向  
+## 未來改進方向  
 - **擴充資料** 加入更多年份的歷史資料，以更全面反映季節性與異常波動。  
 - **使用真實資料進行訓練與驗證** 以提升準確度與泛化能力.  
 - **重新定義日別類型** 以更精準反映出飯店價格與績效趨勢，並提升模型準確度。  
@@ -251,6 +251,6 @@ pip install -r requirements.txt
 - **應用於未來整年度資料** 以模型預測結果來做為營運與定價策略的參考。  
   
 ---
-## 📄 授權聲明    
+## 授權聲明    
 本專案為個人實作用途，所使用資料為合成模擬資料，無任何實際飯店營運數據。未經允許請勿任意使用、發佈或再製此專案內容。  
 

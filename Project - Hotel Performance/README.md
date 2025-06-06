@@ -3,7 +3,7 @@
 # Project - Hotel Performance   
   
 ## Project Overview  
-This project includes two sub-projects appllying statistical analysis and machine learning techniques to support better operational and pricing decisions by revealing patterns in demand, occupancy, and revenue across different day types and market segments. It is divided into three parts:  
+This project includes two sub-projects applying statistical analysis and machine learning techniques to support better operational and pricing decisions by revealing patterns in demand, occupancy, and revenue across different day types and market segments. It is divided into three parts:  
 - Hotel Performance - Statistical Analysis:  
   - **Hypothesis** - Seasonal ADR differences  
   - **Hypothesis** - Occupancy difference between spring and summer  

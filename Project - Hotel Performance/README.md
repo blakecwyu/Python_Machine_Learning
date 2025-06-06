@@ -151,18 +151,33 @@ Also, you can replace hotel-ml with any environment name you prefer.*
   
 ---
 ## Results  
+### Hotel Performance - Statistical Analysis  
+- Hypothesis 1 - **Seasonal ADR Differences**
+  - Null Hypothesis (H0) rejected, there are significant differences in ADR between seasons.
+  - Tukey’s test shows significant ADR differences between: Fall-Summer, Fall-Winter, Spring-Winter.
+  - ADR difference between Spring and Summer is not statistically significant. This contradicts with domain experience, which summer is peak season and spring typically is slower. This raises a question that prices in spring are set too high and lead to low occupancy.
+- Hypothesis 2 - Occupancy difference between spring and summer  
+  - Null Hypothesis (H0) rejected, there are significant differences in occupancy between spring and summer.  
+  - This suggests that prices in spring may be set too high relative to demand, potentially leading to lower occupancy.  
+  - However, a scatter plot shows that ADR and occupancy in spring still has positive relationship.  
+- Correlation - Relationship between prices and occupancy in seasons  
+  - Winter shows the weakest correlation between ADR and occupancy (r = 0.26), while other seasons range from 0.34 to 0.41.
+  - Boxplot shows that winter has much wider distribution both in ADR and occupancy.  
+  - Based on domain experience, December usually has stronger demand, on the other hand, January and Febuary are lowest months except Chinese New Year holiday.  
+  - Theis mix of extremes and low-demand days introduces high variability and possible demand inelasticity, weakening the linear relationship between price and occupancy.  
+  
+### Hotel Performance - ML Regression and Classification  
 - Correlation heatmap shows that total revenue has a **positive relationship** with FIT room nights, occupancy rate, Saturdays, and Holidays. Although GIT and Corporate room nights help fill low-demand days, they are **negatively correlated** with total revenue, likely due to lower average rates in those segments.  
   **This insight may support future strategies for room distribution across different market segments.**  
 - Section 1: **Regression - Predicting Daily Revenue**  
   - Both **Linear Regression** and **Random Forest Regression** were used to predict revenue and average daily rate for future dates, providing insight to support pricing strategies.
 - Section 2: **Classification - Predicting Occupancy Levels**  
-  - The initial **Decision Tree** for occupancy classification showed overfitting. After pruning and tuning, the model improved. Based on the final tree, we should pay closer attention to **Tuesdays during the beginning and end of each month**.  
-  - However, the tree didn’t reveal highly informative patterns overall. This suggests that **day of month, day of week, day type, and special event** may not be sufficient or strongly correlated with occupancy. Based on **domain experience and the correlation heatmap**, adding the **month** as a feature may improve classification, as **seasonality** plays a significant role in hospitality and tourism.  
+  - The initial **Decision Tree** for occupancy classification showed overfitting. After pruning and tuning, the model improved. Based on the final tree, we should pay closer attention to **Tuesdays during the end of each month** and **Mondays during the beginning of each month**.   
   - Currently, the occupancy classification includes **all segments**, but in practice, **GIT and Corporate bookings** are used to fill low-demand days and do not follow a consistent weekly pattern. Since GIT availability is seasonal and irregular, it may introduce noise into the model. A future version could classify based on **FIT-only occupancy or revenue**, providing a clearer signal for organic demand and helping to determine when **GIT/Corp support** is needed.
 - Section 3: **Classification - Grouping Day Types for Pricing Tiers**  
-  - **K-Means clustering** suggests there may be **6–8 distinct day types**, beyond the current weekday/peak/holiday categorization, supporting the idea of more granular pricing tiers.
+  - **K-Means clustering** suggests there may be **4–8 distinct day types**, beyond the current weekday/peak/holiday categorization, supporting the idea of more granular pricing tiers.  
   - Based on **domain experience**, we may consider separating **Saturdays** from other peak days, or defining **special weekday/peak patterns** during **seasonal breaks** (e.g., summer or winter holidays). This refined day type classification could also provide **a new perspective** that may help improve the accuracy of both regression and occupancy classification models.  
-- Visualizations include **correlation heatmaps**, **decision tree diagrams**, and **cluster visualizations** (see notebook).
+- Visualizations include **correlation heatmaps**, **decision tree diagrams**, and **cluster visualizations** (see notebook).  
   
 ---
 ## Future Improvements  

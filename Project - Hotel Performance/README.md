@@ -12,7 +12,7 @@ This project includes two sub-projects appllying statistical analysis and machin
   - **Regression** – Predict hotel performance  
   - **Classification** – Predicting cccupancy levels  
   - **Classification** – Grouping day types for pricing tiers  
-
+  
 The analysis is based on a synthetic dataset simulating realistic hotel performance over a full year (365 days).  
   
 ---  
@@ -20,107 +20,107 @@ The analysis is based on a synthetic dataset simulating realistic hotel performa
 - The dataset is **synthetic**, generated to simulate realistic hotel performance across 365 days.  
 - Fields include:  
   - `date`: Calender date in 2023 (used to derive day and month values)  
-  - `dayofweek`: Day name (e.g., Monday–Sunday)
+  - `dayofweek`: Day name (e.g., Monday–Sunday)  
   - `daytype`: Weekday, Peak, or Holiday  
     - *Peak* includes Fridays to Sundays, the day before a holiday, the last day of a holiday, and one-day holiday.  
     - *Holiday* refers to holidays that span **more than one day**, typically combining with a weekend. One-day holidays are not labeled as "Holiday" in this field.  
   - `special_event`: Indicates whether a special event occurs (negative, none, or positive)  
-  - `rn_fit, rn_git, rn_corp`: Room nights sold in **FIT**(Free Independent Traveler), **GIT**(Group Inclusive Tour), **Corporate** market segments  
+  - `rn_fit, rn_git, rn_corp`: Room nights sold in **FIT**(Free Independent Traveler), **GIT**(Group Inclusive Tour), **Corporate** market segments   
   - `adr_fit, adr_git, adr_corp`: Average Daily Rate (ADR) in each market segments  
   - `rev_fit, rev_git, rev_corp`: Revenue generated in each market segments  
   - `occ`: Occupancy rate (percentage)  
   - `rn_ttl, adr_ttl, rev_ttl`: Total values across all market segments  
-
+  
 *Note:  
 ADR = Revenue / Room Nights Sold  
 RevPAR = ADR * Occupancy*  
-
+  
 --- 
 ## Project Sections  
-###Hotel Performance - Statistical Analysis###  
+##Hotel Performance - Statistical Analysis##  
 1. Hypothesis 1 - Seasonal ADR differences  
-   *Null Hypothesis (H0): There is no significant difference in prices (ADR) between seasons. 
+   *Null Hypothesis (H0): There is no significant difference in prices (ADR) between seasons.  
    Alternative Hypothesis (Ha): At least one season's prices (ADR) differs.*  
   
-   **Features**:
+   **Features**:  
    - Seasons (Spring, Summer, Fall, Winter)  
-   - ADR
+   - ADR  
   
-   **Models**:
-   - One-way ANOVA
-   - Tukey's Range Test
+   **Models**:  
+   - One-way ANOVA  
+   - Tukey's Range Test  
   
    **Goal**: To prove seasonality in hospitality industry and support pricing strategy.  
   
 2. Hypothesis 2 - Occupancy difference between spring and summer  
    *Null Hypothesis (H0): There is no significant difference in occupancy between Spring and Summer.  
-   Alternative Hypothesis (Ha): There is a significant difference in occupancy between Spring and Summer.*
+   Alternative Hypothesis (Ha): There is a significant difference in occupancy between Spring and Summer.*  
   
-   **Features**:
+   **Features**:  
    - Seasons (Spring, Summer, Fall, Winter)  
    - Occupancy rate  
-   
-   **Models**:
-   - two-sample t-test
+  
+   **Models**:  
+   - two-sample t-test  
   
    **Goal**: Based on the result of Hypothesis 1, spring and summer are not found significant difference in prices, which contradicts domain experience. Therefore, a new hypithesis based on occupancy differnece is created to explore whether the high prices in spring lead to low occupancy.  
   
-3. Correlation - Relationship between prices and occupancy in seasons
+3. Correlation - Relationship between prices and occupancy in seasons  
    A scatter plot was created for ADR vs occupancy within the spring season.  
-   Pearson correlation coefficients between ADR and occupancy for each season calculated.
+   Pearson correlation coefficients between ADR and occupancy for each season calculated.  
   
    **Features**:  
    - Seasons (Spring, Summer, Fall, Winter)  
    - ADR  
    - Occupancy rate  
-   
+  
    **Models**:  
-   - Pearson correlation coefficients
+   - Pearson correlation coefficients  
   
    **Goal**: To explore the assumption that ADR in spring may be too high and reveal relationship between ADR and occupancy in each season.  
   
-###Hotel Performance - ML Regression and Classification###  
+##Hotel Performance - ML Regression and Classification##  
 1. Regression: Predicting Hotel Performance  
-   Use multiple regression models to predict **total daily revenue** and calculate ADR and RevPAR   
-   
-   **Features**:
-   - Room nights sold by market (FIT, GIT, Corp)
-   - Occupancy rate
-   - Day of week (Monday–Sunday)
-   - Day type (Weekday, Peak, Holiday)
+   Use multiple regression models to predict **total daily revenue** and calculate ADR and RevPAR  
   
-   **Models**:
-   - Multiple Linear Regression
-   - Random Forest Regression
+   **Features**:  
+   - Room nights sold by market (FIT, GIT, Corp)  
+   - Occupancy rate  
+   - Day of week (Monday–Sunday)  
+   - Day type (Weekday, Peak, Holiday)  
+  
+   **Models**:  
+   - Multiple Linear Regression  
+   - Random Forest Regression  
   
    **Goal**: Estimate expected revenue based on operational and calendar variables providing insights for future pricing strategies.  
   
 2. Classification: Predicting Occupancy Levels  
    Classify whether a day will have **high occupancy (≥60%)** or **low occupancy (<60%)**  
-
-   **Features**:
-   - Day of the month (1st–31st)
-   - Day of week (Monday–Sunday)
-   - Day type (Weekday, Peak, Holiday)
-   - Special event impact (Negative / None / Positive)
-
-   **Model**:
-   - Decision Tree Classifier
-
-   **Goal**: To support future pricing strategies by identifying days that are more likely to have low occupancy so that targeted promotional or pricing actions can be taken.
+  
+   **Features**:  
+   - Day of the month (1st–31st)  
+   - Day of week (Monday–Sunday)  
+   - Day type (Weekday, Peak, Holiday)  
+   - Special event impact (Negative / None / Positive)  
+  
+   **Model**:  
+   - Decision Tree Classifier  
+  
+   **Goal**: To support future pricing strategies by identifying days that are more likely to have low occupancy so that targeted promotional or pricing actions can be taken.  
   
 3. Classification: Grouping Day Types for Pricing Tiers  
    Use clustering to identify whether the **existing day types**, weekday, peak, holiday, are sufficient, or if more **refined day types** should be created to better support pricing strategies.  
-
-   **Features**:
-   - Room nights sold by market (FIT, GIT, Corp)
-   - Revenue by market (FIT, GIT, Corp)
-
-   **Model**:
+  
+   **Features**:  
+   - Room nights sold by market (FIT, GIT, Corp)  
+   - Revenue by market (FIT, GIT, Corp)  
+  
+   **Model**:  
    - K-Means Clustering  
   
    **Goal**: Identify potential new day types (e.g., peak-season weekday, Saturday, event-driven weekend) based on performance patterns, to support more effective pricing tiers beyond the standard 3-category system.  
-
+  
 ---  
 ## Project Structure  
 Project - Hotel Performance/  

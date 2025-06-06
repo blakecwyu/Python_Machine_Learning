@@ -124,15 +124,15 @@ RevPAR = ADR * Occupancy*
 ---  
 ## Project Structure  
 Project - Hotel Performance/  
-├── data/
-│   └── Mock_Hotel_daily.csv # Synthetic dataset (365 days) 
-├── notebooks/
+├── data/  
+│   └── Mock_Hotel_daily.csv # Synthetic dataset (365 days)  
+├── notebooks/  
 │   └── 01 - Hotel Performance - Statistical Analysis.ipynb # Jupyter notebook with statistical analysis (EDA, models, results)  
 │   └── 02 - Hotel Performance - ML Regression and Classification.ipynb # Jupyter notebook with regression and classification (EDA, models, results)  
-├── .gitignore # List of items Git not to track
+├── .gitignore # List of items Git not to track  
 ├── README.md # Project overview and usage  
 └── requirements.txt # Python dependencies for pip installation  
-
+  
 ---  
 ## Installation  
 ### Option 1: With pip  

@@ -36,7 +36,7 @@ RevPAR = 平均房價 × 住房率*
 
 --- 
 ## 專案內容
-
+![Project Flow](project_flow/Project_Flow_Diagram.png)
 ### 統計分析  
 1. **假設檢定1 - 平均房價季節差異**  
    *虛無假設 H0：各季節沒有顯著平均房價差異  

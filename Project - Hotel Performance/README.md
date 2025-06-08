@@ -1,4 +1,4 @@
-**[中文版本](README_zh.md) | [English](README.md)  
+[中文版本](README_zh.md) | [English](README.md)  
   
 # Project - Hotel Performance   
   

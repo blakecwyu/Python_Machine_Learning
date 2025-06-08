@@ -37,6 +37,7 @@ RevPAR = ADR × Occupancy*
   
 --- 
 ## Project Sections  
+![Project Flow](project_flow/Hotel Project Flow Diagram.png)
 ### Statistical Analysis  
 1. **Hypothesis 1 – Seasonal ADR Differences**  
    *Null Hypothesis (H0): There is no significant difference in prices (ADR) between seasons.  
@@ -128,6 +129,8 @@ Project - Hotel Performance/
 ├── notebooks/  
 │   └── 01 - Hotel Performance - Statistical Analysis.ipynb  
 │   └── 02 - Hotel Performance - ML Regression and Classification.ipynb  
+├── project_flow/  
+│   └── Hotel Project Flow Diagram.png  
 ├── .gitignore  
 ├── README.md  
 └── requirements.txt  

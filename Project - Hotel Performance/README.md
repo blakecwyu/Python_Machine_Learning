@@ -130,7 +130,7 @@ Project - Hotel Performance/
 │   └── 01 - Hotel Performance - Statistical Analysis.ipynb  
 │   └── 02 - Hotel Performance - ML Regression and Classification.ipynb  
 ├── project_flow/  
-│   └── Hotel Project Flow Diagram.png  
+│   └── Project_Flow_Diagram.png  
 ├── .gitignore  
 ├── README.md  
 └── requirements.txt  

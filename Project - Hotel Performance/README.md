@@ -335,6 +335,8 @@ Project - Hotel Performance/
 ├── notebooks/  
 │   └── 01 - Hotel Performance - Statistical Analysis.ipynb  
 │   └── 02 - Hotel Performance - ML Regression and Classification.ipynb  
+├── project_flow/  
+│   └── Project_Flow_Diagram.png  
 ├── .gitignore  
 ├── README.md  
 └── requirements.txt  
